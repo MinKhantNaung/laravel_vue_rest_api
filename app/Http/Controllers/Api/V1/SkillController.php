@@ -26,7 +26,7 @@ class SkillController extends Controller
 
         if ($validator->fails()) {
             return response()->json([
-                $validator->errors()
+                'errors' => $validator->errors()
             ], 400);
         }
 
@@ -41,8 +41,8 @@ class SkillController extends Controller
 
     public function show($id) {
         return response()->json([
-            Skill::find($id)
-        ]);
+            'skill' => Skill::find($id)
+        ], 200);
     }
 
     public function update(Request $request, $id) {
@@ -53,7 +53,7 @@ class SkillController extends Controller
 
         if ($validator->fails()) {
             return response()->json([
-                $validator->errors()
+                'errors' => $validator->errors()
             ], 400);
         }
 
