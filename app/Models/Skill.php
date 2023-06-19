@@ -9,5 +9,5 @@ class Skill extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user', 'slug'];
+    protected $fillable = ['name', 'slug'];
 }
